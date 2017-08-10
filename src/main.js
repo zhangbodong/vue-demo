@@ -3,19 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-import VueLazyLoad from 'vue-lazyload' 
-import '../static/css/base.css'
-import '../static/css/checkout.css'
-import '../static/css/login.css'
-import '../static/css/product.css'
+import VueLazyLoad from 'vue-lazyload'
 
-Vue.use(VueAxios, axios)
-Vue.use(VueLazyLoad, {
-	loading: '../static/loading/loading-spinning-bubbles.svg'
-})
+// css
+import '@/assets/css/base.css'
+import '@/assets/css/login.css'
+import '@/assets/css/product.css'
 Vue.config.productionTip = false
+
+Vue.use(VueLazyLoad,{
+	// loading:'/static/loading/loading-spinning-bubbles.svg'
+	loading:'/static/img/ok-2.png'
+});
 
 /* eslint-disable no-new */
 new Vue({
